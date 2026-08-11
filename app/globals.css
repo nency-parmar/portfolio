@@ -24,3 +24,5553 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* =========================================================
+   PREMIUM NAVBAR
+   Purple / Black / White Theme
+   ========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  padding: 22px 0;
+
+  background: rgba(8, 5, 18, 0.35);
+
+  border-bottom: 1px solid transparent;
+
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+
+  transition:
+    background 0.4s ease,
+    padding 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.navbar-scrolled {
+  padding: 14px 0;
+
+  background: rgba(8, 5, 18, 0.78);
+
+  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(124, 58, 237, 0.05);
+}
+
+.navbar-container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.navbar-logo {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  font-family: "Fira Code", monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  letter-spacing: -0.04em;
+
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo-bracket {
+  color: #a855f7;
+
+  text-shadow:
+    0 0 10px rgba(168, 85, 247, 0.7),
+    0 0 25px rgba(168, 85, 247, 0.35);
+
+  transition: text-shadow 0.3s ease;
+}
+
+.logo-name {
+  color: #ffffff;
+
+  margin: 0 3px;
+}
+
+.navbar-logo::after {
+  content: "";
+
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  right: -9px;
+  bottom: 1px;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  box-shadow:
+    0 0 8px #a855f7,
+    0 0 18px rgba(168, 85, 247, 0.7);
+
+  animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-left: auto;
+}
+
+.nav-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px 15px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+
+  background: rgba(168, 85, 247, 0.07);
+}
+
+.nav-link-active {
+  color: #ffffff;
+}
+
+.nav-active-dot {
+  position: absolute;
+
+  bottom: 3px;
+  left: 50%;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  box-shadow:
+    0 0 8px #a855f7,
+    0 0 16px rgba(168, 85, 247, 0.8);
+
+  transform: translateX(-50%);
+}
+
+/* =========================================================
+   HIRE ME BUTTON
+   ========================================================= */
+
+.navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 17px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  border: 1px solid rgba(168, 85, 247, 0.45);
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(135deg,
+      rgba(168, 85, 247, 0.18),
+      rgba(88, 28, 135, 0.08));
+
+  box-shadow:
+    inset 0 0 20px rgba(168, 85, 247, 0.04),
+    0 0 20px rgba(168, 85, 247, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-cta:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(192, 132, 252, 0.9);
+
+  background:
+    linear-gradient(135deg,
+      rgba(168, 85, 247, 0.3),
+      rgba(88, 28, 135, 0.18));
+
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.18),
+    inset 0 0 20px rgba(168, 85, 247, 0.08);
+}
+
+.cta-arrow {
+  color: #c084fc;
+
+  font-size: 1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.navbar-cta:hover .cta-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 10px;
+
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 10px;
+
+  background: rgba(168, 85, 247, 0.06);
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  border-color: rgba(168, 85, 247, 0.55);
+
+  background: rgba(168, 85, 247, 0.12);
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 19px;
+  height: 2px;
+
+  border-radius: 2px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.mobile-menu-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-nav {
+  display: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .desktop-nav,
+  .navbar-cta {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .mobile-nav {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    display: block;
+
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    background: rgba(8, 5, 18, 0.96);
+
+    border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    transition:
+      max-height 0.5s ease,
+      opacity 0.3s ease;
+  }
+
+  .mobile-nav-open {
+    max-height: 600px;
+    opacity: 1;
+  }
+
+  .mobile-nav-inner {
+    width: min(600px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    padding: 20px 0 28px;
+  }
+
+  .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 17px 5px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    transform: translateY(-10px);
+
+    opacity: 0;
+
+    transition:
+      color 0.3s ease,
+      transform 0.4s ease,
+      opacity 0.4s ease;
+  }
+
+  .mobile-nav-open .mobile-nav-link {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link-active {
+    color: #ffffff;
+  }
+
+  .mobile-nav-number {
+    width: 30px;
+
+    color: #a855f7;
+
+    font-family: "Fira Code", monospace;
+    font-size: 0.7rem;
+  }
+
+  .mobile-nav-arrow {
+    margin-left: auto;
+
+    color: #a855f7;
+
+    opacity: 0;
+
+    transform: translate(-5px, 5px);
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .mobile-nav-link:hover .mobile-nav-arrow,
+  .mobile-nav-link-active .mobile-nav-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  .mobile-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 22px;
+
+    padding: 14px 17px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-radius: 12px;
+
+    background: rgba(168, 85, 247, 0.09);
+
+    transition:
+      background 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .mobile-cta:hover {
+    background: rgba(168, 85, 247, 0.17);
+    border-color: rgba(168, 85, 247, 0.7);
+  }
+
+  .mobile-cta span {
+    color: #c084fc;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container {
+    width: calc(100% - 32px);
+  }
+
+  .navbar {
+    padding: 17px 0;
+  }
+
+  .navbar-scrolled {
+    padding: 12px 0;
+  }
+
+  .navbar-logo {
+    font-size: 1.1rem;
+  }
+
+  .mobile-nav-inner {
+    width: calc(100% - 32px);
+  }
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 140px 0 90px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 72% 42%,
+      rgba(124, 58, 237, 0.10),
+      transparent 30%),
+    #080512;
+}
+
+/* =========================================================
+   HERO BACKGROUND
+   ========================================================= */
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.18;
+
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.06) 1px,
+      transparent 1px),
+    linear-gradient(90deg,
+      rgba(168, 85, 247, 0.06) 1px,
+      transparent 1px);
+
+  background-size: 80px 80px;
+
+  mask-image: radial-gradient(ellipse at center,
+      black 10%,
+      transparent 75%);
+
+  -webkit-mask-image: radial-gradient(ellipse at center,
+      black 10%,
+      transparent 75%);
+}
+
+.hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(90px);
+}
+
+.hero-glow-one {
+  width: 650px;
+  height: 650px;
+
+  top: 5%;
+  right: -10%;
+
+  background: rgba(124, 58, 237, 0.14);
+
+  animation: heroGlowFloat 8s ease-in-out infinite;
+}
+
+.hero-glow-two {
+  width: 450px;
+  height: 450px;
+
+  bottom: -15%;
+  left: -10%;
+
+  background: rgba(88, 28, 135, 0.12);
+
+  animation: heroGlowFloat 10s ease-in-out infinite reverse;
+}
+
+@keyframes heroGlowFloat {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -25px, 0);
+  }
+}
+
+/* =========================================================
+   HERO ORBS
+   ========================================================= */
+
+.hero-orb {
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #c084fc;
+
+  box-shadow:
+    0 0 10px #a855f7,
+    0 0 25px rgba(168, 85, 247, 0.7);
+
+  opacity: 0.7;
+}
+
+.orb-one {
+  top: 25%;
+  left: 8%;
+
+  animation: orbFloat 5s ease-in-out infinite;
+}
+
+.orb-two {
+  right: 12%;
+  bottom: 22%;
+
+  animation: orbFloat 6s ease-in-out infinite reverse;
+}
+
+@keyframes orbFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr) minmax(480px, 0.95fr);
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  animation: heroContentReveal 0.9s ease-out both;
+}
+
+@keyframes heroContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   AVAILABILITY BADGE
+   ========================================================= */
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 28px;
+
+  padding: 8px 13px;
+
+  border: 1px solid rgba(168, 85, 247, 0.22);
+
+  border-radius: 100px;
+
+  background: rgba(168, 85, 247, 0.06);
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+
+  box-shadow:
+    inset 0 0 20px rgba(168, 85, 247, 0.025),
+    0 0 25px rgba(168, 85, 247, 0.03);
+}
+
+.availability-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  box-shadow:
+    0 0 8px #a855f7,
+    0 0 16px rgba(168, 85, 247, 0.7);
+
+  animation: availabilityPulse 2s ease-in-out infinite;
+}
+
+@keyframes availabilityPulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* =========================================================
+   HERO INTRO
+   ========================================================= */
+
+.hero-intro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 8px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+}
+
+.intro-line {
+  width: 28px;
+  height: 1px;
+
+  background: #a855f7;
+
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.8);
+}
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.hero-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(4rem, 7vw, 6.8rem);
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.075em;
+}
+
+.hero-title-gradient {
+  background: linear-gradient(110deg,
+      #ffffff 5%,
+      #e9d5ff 35%,
+      #c084fc 65%,
+      #8b5cf6 100%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.15));
+}
+
+/* =========================================================
+   HERO ROLE
+   ========================================================= */
+
+.hero-role {
+  display: flex;
+  align-items: center;
+
+  min-height: 42px;
+
+  margin-top: 27px;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: clamp(1rem, 2vw, 1.25rem);
+
+  font-weight: 500;
+}
+
+.role-symbol {
+  color: #a855f7;
+
+  text-shadow:
+    0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.typing-role {
+  margin: 0 7px;
+
+  color: #ffffff;
+
+  min-width: 12ch;
+}
+
+.typing-cursor {
+  color: #c084fc;
+
+  animation: cursorBlink 0.8s steps(1) infinite;
+}
+
+@keyframes cursorBlink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+  max-width: 560px;
+
+  margin-top: 20px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.98rem;
+
+  line-height: 1.9;
+
+  letter-spacing: -0.01em;
+}
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: 34px;
+}
+
+.hero-primary-button,
+.hero-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 50px;
+
+  padding: 0 20px;
+
+  border-radius: 11px;
+
+  font-size: 0.86rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero-primary-button {
+  color: #ffffff;
+
+  border: 1px solid rgba(192, 132, 252, 0.55);
+
+  background:
+    linear-gradient(135deg,
+      rgba(168, 85, 247, 0.95),
+      rgba(109, 40, 217, 0.92));
+
+  box-shadow:
+    0 8px 30px rgba(124, 58, 237, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.hero-primary-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 40px rgba(124, 58, 237, 0.3),
+    0 0 25px rgba(168, 85, 247, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.button-arrow {
+  font-size: 1.1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.hero-primary-button:hover .button-arrow {
+  transform: translate(3px, -3px);
+}
+
+.hero-secondary-button {
+  color: rgba(255, 255, 255, 0.75);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.hero-secondary-button:hover {
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  border-color: rgba(168, 85, 247, 0.4);
+
+  background: rgba(168, 85, 247, 0.06);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.download-icon {
+  color: #c084fc;
+
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   SOCIALS
+   ========================================================= */
+
+.hero-social-area {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 38px;
+}
+
+.social-label {
+  color: rgba(255, 255, 255, 0.32);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.14em;
+}
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.66rem;
+  font-weight: 600;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-social:hover {
+  color: #ffffff;
+
+  border-color: rgba(168, 85, 247, 0.55);
+
+  background: rgba(168, 85, 247, 0.1);
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 20px rgba(168, 85, 247, 0.12);
+}
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.hero-visual {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: heroVisualReveal 1s 0.15s ease-out both;
+}
+
+@keyframes heroVisualReveal {
+  from {
+    opacity: 0;
+    transform: translateX(35px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.code-glow {
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background: rgba(124, 58, 237, 0.2);
+
+  filter: blur(80px);
+
+  animation: codeGlow 6s ease-in-out infinite;
+}
+
+@keyframes codeGlow {
+
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
+
+/* =========================================================
+   DECORATIVE RINGS
+   ========================================================= */
+
+.visual-ring {
+  position: absolute;
+
+  border: 1px solid rgba(168, 85, 247, 0.12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.visual-ring-one {
+  width: 510px;
+  height: 510px;
+
+  transform: rotate(-18deg) scaleY(0.42);
+
+  box-shadow:
+    0 0 40px rgba(168, 85, 247, 0.04);
+
+  animation: ringRotate 15s linear infinite;
+}
+
+.visual-ring-two {
+  width: 590px;
+  height: 590px;
+
+  transform: rotate(20deg) scaleY(0.34);
+
+  border-color: rgba(192, 132, 252, 0.08);
+
+  animation: ringRotateReverse 20s linear infinite;
+}
+
+@keyframes ringRotate {
+  from {
+    transform: rotate(-18deg) scaleY(0.42);
+  }
+
+  to {
+    transform: rotate(342deg) scaleY(0.42);
+  }
+}
+
+@keyframes ringRotateReverse {
+  from {
+    transform: rotate(20deg) scaleY(0.34);
+  }
+
+  to {
+    transform: rotate(-340deg) scaleY(0.34);
+  }
+}
+
+/* =========================================================
+   CODE CARD
+   ========================================================= */
+
+.code-card {
+  position: relative;
+
+  z-index: 4;
+
+  width: min(500px, 100%);
+
+  overflow: hidden;
+
+  border: 1px solid rgba(168, 85, 247, 0.2);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(145deg,
+      rgba(21, 12, 38, 0.94),
+      rgba(8, 5, 18, 0.96));
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.55),
+    0 0 50px rgba(124, 58, 237, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+
+  transition:
+    transform 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.code-card:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-5px);
+
+  border-color: rgba(168, 85, 247, 0.38);
+}
+
+/* =========================================================
+   CODE HEADER
+   ========================================================= */
+
+.code-card-header {
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 17px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.window-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.window-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+}
+
+.dot-red {
+  background: #ff5f57;
+}
+
+.dot-yellow {
+  background: #ffbd2e;
+}
+
+.dot-green {
+  background: #28c840;
+}
+
+.code-file {
+  margin-left: auto;
+  margin-right: auto;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.66rem;
+}
+
+.code-status {
+  color: #a855f7;
+
+  font-size: 0.55rem;
+
+  text-shadow: 0 0 10px #a855f7;
+}
+
+/* =========================================================
+   CODE BODY
+   ========================================================= */
+
+.code-body {
+  padding: 25px 20px 28px;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: clamp(0.66rem, 1.3vw, 0.78rem);
+
+  line-height: 2;
+}
+
+.code-line {
+  display: grid;
+
+  grid-template-columns: 28px 1fr;
+
+  min-height: 28px;
+}
+
+.line-number {
+  color: rgba(255, 255, 255, 0.16);
+
+  user-select: none;
+}
+
+.code-indent {
+  padding-left: 20px;
+}
+
+.code-indent-double {
+  padding-left: 40px;
+}
+
+.code-purple {
+  color: #c084fc;
+}
+
+.code-orange {
+  color: #f0abfc;
+}
+
+.code-blue {
+  color: #93c5fd;
+}
+
+.code-green {
+  color: #86efac;
+}
+
+.code-white {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.code-empty {
+  height: 5px;
+}
+
+/* =========================================================
+   CODE FOOTER
+   ========================================================= */
+
+.code-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 11px 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.56rem;
+}
+
+.code-card-footer>span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.footer-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  box-shadow: 0 0 8px #a855f7;
+}
+
+/* =========================================================
+   FLOATING TECH BADGES
+   ========================================================= */
+
+.floating-tech {
+  position: absolute;
+
+  z-index: 5;
+
+  padding: 8px 12px;
+
+  border: 1px solid rgba(168, 85, 247, 0.2);
+
+  border-radius: 9px;
+
+  background: rgba(13, 7, 24, 0.82);
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.61rem;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(168, 85, 247, 0.04);
+
+  backdrop-filter: blur(12px);
+}
+
+.tech-react {
+  top: 12%;
+  right: 5%;
+
+  animation: techFloatOne 5s ease-in-out infinite;
+}
+
+.tech-node {
+  left: 0;
+  bottom: 18%;
+
+  animation: techFloatTwo 6s ease-in-out infinite;
+}
+
+.tech-next {
+  right: 0;
+  bottom: 7%;
+
+  animation: techFloatThree 5.5s ease-in-out infinite;
+}
+
+@keyframes techFloatOne {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(2deg);
+  }
+
+  50% {
+    transform: translateY(-13px) rotate(-2deg);
+  }
+}
+
+@keyframes techFloatTwo {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(15px) rotate(2deg);
+  }
+}
+
+@keyframes techFloatThree {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(1deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.hero-scroll {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 50%;
+  bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.55rem;
+
+  letter-spacing: 0.15em;
+
+  transform: translateX(-50%);
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.hero-scroll:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.scroll-line {
+  position: relative;
+
+  width: 42px;
+  height: 1px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.scroll-line span {
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 50%;
+  height: 100%;
+
+  background: #a855f7;
+
+  box-shadow: 0 0 8px #a855f7;
+
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .hero-container {
+    grid-template-columns: 1fr 0.85fr;
+
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.7rem, 7vw, 5.5rem);
+  }
+
+  .hero-visual {
+    min-height: 500px;
+  }
+
+  .code-card {
+    width: 100%;
+  }
+
+  .visual-ring-one {
+    width: 430px;
+    height: 430px;
+  }
+
+  .visual-ring-two {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .hero {
+    padding-top: 130px;
+    padding-bottom: 100px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .availability-badge,
+  .hero-intro,
+  .hero-role,
+  .hero-actions,
+  .hero-social-area {
+    justify-content: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-visual {
+    min-height: 480px;
+  }
+
+  .tech-react {
+    right: 2%;
+  }
+
+  .tech-node {
+    left: 2%;
+  }
+
+  .tech-next {
+    right: 2%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-container {
+    width: calc(100% - 28px);
+  }
+
+  .availability-badge {
+    font-size: 0.58rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3.2rem, 17vw, 4.5rem);
+
+    letter-spacing: -0.08em;
+  }
+
+  .hero-role {
+    font-size: 0.82rem;
+  }
+
+  .hero-description {
+    font-size: 0.86rem;
+
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    width: min(280px, 100%);
+  }
+
+  .hero-social-area {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .hero-visual {
+    min-height: 390px;
+  }
+
+  .code-card {
+    border-radius: 14px;
+
+    transform: none;
+  }
+
+  .code-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .code-body {
+    padding: 18px 12px 20px;
+
+    font-size: 0.53rem;
+
+    line-height: 1.9;
+  }
+
+  .code-line {
+    grid-template-columns: 22px 1fr;
+  }
+
+  .code-indent {
+    padding-left: 10px;
+  }
+
+  .code-indent-double {
+    padding-left: 20px;
+  }
+
+  .code-card-header {
+    height: 43px;
+  }
+
+  .floating-tech {
+    display: none;
+  }
+
+  .visual-ring-one {
+    width: 330px;
+    height: 330px;
+  }
+
+  .visual-ring-two {
+    width: 390px;
+    height: 390px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero *,
+  .hero *::before,
+  .hero *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about-section {
+  position: relative;
+
+  padding: 150px 0 130px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(180deg,
+      #080512 0%,
+      #0b0614 50%,
+      #080512 100%);
+}
+
+/* =========================================================
+   BACKGROUND GLOWS
+   ========================================================= */
+
+.about-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.about-glow-one {
+  width: 450px;
+  height: 450px;
+
+  top: 10%;
+  right: -15%;
+
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.about-glow-two {
+  width: 350px;
+  height: 350px;
+
+  bottom: 0;
+  left: -15%;
+
+  background: rgba(168, 85, 247, 0.06);
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.about-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.about-heading {
+  max-width: 700px;
+
+  margin-bottom: 70px;
+}
+
+.section-eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #a855f7;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.68rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+}
+
+.about-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.section-subtitle {
+  max-width: 590px;
+
+  margin-top: 22px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   ABOUT GRID
+   ========================================================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr) minmax(330px, 0.65fr);
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   MAIN ABOUT CARD
+   ========================================================= */
+
+.about-card {
+  position: relative;
+
+  height: 100%;
+
+  padding: 38px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(168, 85, 247, 0.13);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012));
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+  backdrop-filter: blur(20px);
+
+  transition:
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.about-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -170px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(168, 85, 247, 0.07);
+
+  filter: blur(50px);
+
+  pointer-events: none;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(168, 85, 247, 0.28);
+}
+
+.about-card-top {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 55px;
+}
+
+.about-card-label {
+  color: rgba(255, 255, 255, 0.32);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.15em;
+}
+
+.about-card-number {
+  color: rgba(168, 85, 247, 0.55);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.7rem;
+}
+
+.about-card h3 {
+  margin-bottom: 22px;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+
+  font-weight: 700;
+
+  letter-spacing: -0.055em;
+}
+
+.about-card p {
+  max-width: 680px;
+
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.91rem;
+
+  line-height: 1.9;
+}
+
+.about-card p:last-of-type {
+  margin-bottom: 28px;
+}
+
+/* =========================================================
+   HIGHLIGHT
+   ========================================================= */
+
+.about-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 14px;
+
+  border: 1px solid rgba(168, 85, 247, 0.16);
+
+  border-radius: 9px;
+
+  background: rgba(168, 85, 247, 0.045);
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.67rem;
+}
+
+.highlight-icon {
+  color: #c084fc;
+
+  text-shadow:
+    0 0 10px rgba(168, 85, 247, 0.7);
+}
+
+/* =========================================================
+   SIDE COLUMN
+   ========================================================= */
+
+.about-side {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+/* =========================================================
+   FACT CARDS
+   ========================================================= */
+
+.about-fact-card {
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  min-height: 91px;
+
+  padding: 18px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.018);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.about-fact-card:hover {
+  transform: translateX(5px);
+
+  border-color: rgba(168, 85, 247, 0.28);
+
+  background: rgba(168, 85, 247, 0.045);
+}
+
+.fact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 43px;
+  height: 43px;
+
+  border: 1px solid rgba(168, 85, 247, 0.18);
+
+  border-radius: 11px;
+
+  background: rgba(168, 85, 247, 0.07);
+
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.75rem;
+
+  box-shadow:
+    0 0 20px rgba(168, 85, 247, 0.05);
+}
+
+.fact-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.56rem;
+
+  letter-spacing: 0.1em;
+}
+
+.about-fact-card h4 {
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 0.78rem;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   MINI CODE CARD
+   ========================================================= */
+
+.about-code-card {
+  margin-top: auto;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(168, 85, 247, 0.14);
+
+  border-radius: 14px;
+
+  background: #0b0614;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.about-code-header {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  height: 38px;
+
+  padding: 0 13px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.code-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.code-dot:first-child {
+  background: #ff5f57;
+}
+
+.code-dot:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.code-dot:nth-child(3) {
+  background: #28c840;
+}
+
+.about-code-file {
+  margin-left: auto;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.55rem;
+}
+
+.about-code-content {
+  padding: 17px 18px 20px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.65rem;
+
+  line-height: 1.9;
+}
+
+.about-code-content p {
+  margin: 0;
+}
+
+.about-code-content .code-indent {
+  padding-left: 20px;
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.about-stats {
+  display: flex;
+  align-items: center;
+
+  margin-top: 55px;
+
+  padding: 25px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.about-stat {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.stat-number {
+  color: #c084fc;
+
+  font-size: 1.65rem;
+
+  font-weight: 700;
+
+  letter-spacing: -0.04em;
+
+  text-shadow:
+    0 0 25px rgba(168, 85, 247, 0.18);
+}
+
+.stat-text {
+  color: rgba(255, 255, 255, 0.32);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.04em;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 45px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 120px 0 100px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-side {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-code-card {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 100px 0 80px;
+  }
+
+  .about-container {
+    width: calc(100% - 28px);
+  }
+
+  .about-heading {
+    margin-bottom: 45px;
+  }
+
+  .about-heading h2 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .about-card {
+    padding: 25px 21px;
+  }
+
+  .about-card-top {
+    margin-bottom: 35px;
+  }
+
+  .about-card h3 {
+    font-size: 2rem;
+  }
+
+  .about-card p {
+    font-size: 0.82rem;
+
+    line-height: 1.8;
+  }
+
+  .about-side {
+    display: flex;
+  }
+
+  .about-fact-card {
+    min-height: 80px;
+  }
+
+  .about-stats {
+    gap: 10px;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .stat-text {
+    font-size: 0.48rem;
+
+    line-height: 1.5;
+  }
+
+  .stat-divider {
+    height: 35px;
+  }
+}
+
+/* =========================================================
+   SKILLS SECTION
+   ========================================================= */
+
+.skills-section {
+  position: relative;
+
+  padding: 150px 0 140px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(180deg,
+      #080512 0%,
+      #0d0718 50%,
+      #080512 100%);
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.skills-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+}
+
+.skills-glow-one {
+  width: 500px;
+  height: 500px;
+
+  top: 10%;
+  left: -20%;
+
+  background: rgba(124, 58, 237, 0.07);
+}
+
+.skills-glow-two {
+  width: 400px;
+  height: 400px;
+
+  right: -15%;
+  bottom: 5%;
+
+  background: rgba(168, 85, 247, 0.07);
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.skills-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.skills-heading {
+  max-width: 700px;
+
+  margin-bottom: 65px;
+}
+
+.skills-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+/* =========================================================
+   SKILLS GRID
+   ========================================================= */
+
+.skills-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+/* =========================================================
+   SKILL CARD
+   ========================================================= */
+
+.skill-card {
+  position: relative;
+
+  min-height: 300px;
+
+  padding: 25px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.065);
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012));
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.skill-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+
+  top: -100px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(168, 85, 247, 0.07);
+
+  filter: blur(45px);
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(168, 85, 247, 0.3);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.3),
+    0 0 35px rgba(168, 85, 247, 0.06);
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill-number {
+  color: rgba(168, 85, 247, 0.55);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.6rem;
+
+  letter-spacing: 0.08em;
+}
+
+.skill-arrow {
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 1rem;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.skill-card:hover .skill-arrow {
+  color: #c084fc;
+
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   SKILL ICON
+   ========================================================= */
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-top: 35px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(168, 85, 247, 0.18);
+
+  border-radius: 12px;
+
+  background: rgba(168, 85, 247, 0.06);
+
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.75rem;
+
+  box-shadow:
+    inset 0 0 20px rgba(168, 85, 247, 0.025);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  background: rgba(168, 85, 247, 0.12);
+
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.12);
+}
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.skill-card h3 {
+  margin-bottom: 9px;
+
+  color: #ffffff;
+
+  font-size: 1.1rem;
+
+  font-weight: 650;
+
+  letter-spacing: -0.025em;
+}
+
+.skill-card p {
+  min-height: 44px;
+
+  margin-bottom: 20px;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 0.72rem;
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   SKILL TAGS
+   ========================================================= */
+
+.skill-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.skill-tag {
+  padding: 6px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.55rem;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.skill-card:hover .skill-tag {
+  border-color: rgba(168, 85, 247, 0.14);
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================================================
+   TOOLS CARD
+   ========================================================= */
+
+.tools-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 15px;
+
+  padding: 25px 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.065);
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(100deg,
+      rgba(168, 85, 247, 0.045),
+      rgba(255, 255, 255, 0.018));
+}
+
+.tools-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.tools-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+
+  border: 1px solid rgba(168, 85, 247, 0.18);
+
+  border-radius: 10px;
+
+  background: rgba(168, 85, 247, 0.06);
+
+  color: #c084fc;
+
+  font-size: 0.9rem;
+}
+
+.tools-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.55rem;
+
+  letter-spacing: 0.12em;
+}
+
+.tools-heading h3 {
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.86rem;
+
+  font-weight: 500;
+}
+
+.tools-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+}
+
+.tool-item {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.58rem;
+}
+
+.tool-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  box-shadow:
+    0 0 8px rgba(168, 85, 247, 0.7);
+}
+
+/* =========================================================
+   LEARNING STRIP
+   ========================================================= */
+
+.learning-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 15px;
+
+  padding: 24px 28px;
+
+  border: 1px solid rgba(168, 85, 247, 0.11);
+
+  border-radius: 17px;
+
+  background: rgba(168, 85, 247, 0.025);
+}
+
+.learning-left {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.learning-symbol {
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 1.1rem;
+
+  text-shadow:
+    0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.learning-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.55rem;
+
+  letter-spacing: 0.12em;
+}
+
+.learning-left p {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.72rem;
+}
+
+.learning-status {
+  flex-shrink: 0;
+
+  padding: 7px 10px;
+
+  border: 1px solid rgba(168, 85, 247, 0.2);
+
+  border-radius: 7px;
+
+  background: rgba(168, 85, 247, 0.06);
+
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.5rem;
+
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .skills-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .tools-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .tools-list {
+    justify-content: flex-start;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 100px 0;
+  }
+
+  .skills-container {
+    width: calc(100% - 28px);
+  }
+
+  .skills-heading {
+    margin-bottom: 45px;
+  }
+
+  .skills-heading h2 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    min-height: auto;
+
+    padding: 22px;
+  }
+
+  .skill-icon {
+    margin-top: 27px;
+  }
+
+  .tools-card {
+    padding: 20px;
+  }
+
+  .tools-heading {
+    align-items: flex-start;
+  }
+
+  .learning-strip {
+    align-items: flex-start;
+
+    padding: 20px;
+  }
+
+  .learning-left {
+    align-items: flex-start;
+  }
+
+  .learning-strip {
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   EDUCATION SECTION
+   ========================================================= */
+
+.education-section {
+  position: relative;
+
+  padding: 150px 0 140px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(180deg,
+      #080512 0%,
+      #0d0718 50%,
+      #080512 100%);
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.education-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+}
+
+.education-glow-one {
+  width: 450px;
+  height: 450px;
+
+  top: 5%;
+  right: -18%;
+
+  background: rgba(168, 85, 247, 0.07);
+}
+
+.education-glow-two {
+  width: 350px;
+  height: 350px;
+
+  bottom: 10%;
+  left: -18%;
+
+  background: rgba(124, 58, 237, 0.06);
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.education-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1000px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.education-heading {
+  max-width: 700px;
+
+  margin-bottom: 70px;
+}
+
+.education-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.education-timeline {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.education-item {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  gap: 20px;
+
+  min-height: 230px;
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.timeline-dot {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 15px;
+  height: 15px;
+
+  margin-top: 35px;
+
+  border: 1px solid rgba(168, 85, 247, 0.45);
+
+  border-radius: 50%;
+
+  background: #0d0718;
+
+  box-shadow:
+    0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.timeline-dot-inner {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #c084fc;
+
+  box-shadow:
+    0 0 12px rgba(168, 85, 247, 0.8);
+}
+
+.timeline-line {
+  position: absolute;
+
+  top: 49px;
+
+  bottom: 0;
+
+  width: 1px;
+
+  background:
+    linear-gradient(180deg,
+      rgba(168, 85, 247, 0.3),
+      rgba(168, 85, 247, 0.05));
+}
+
+/* =========================================================
+   EDUCATION CARD
+   ========================================================= */
+
+.education-card {
+  position: relative;
+
+  margin-bottom: 18px;
+
+  padding: 30px 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.065);
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012));
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.education-card:hover {
+  transform: translateX(6px);
+
+  border-color: rgba(168, 85, 247, 0.25);
+
+  background:
+    linear-gradient(145deg,
+      rgba(168, 85, 247, 0.055),
+      rgba(255, 255, 255, 0.012));
+}
+
+/* Current education */
+
+.education-current .education-card {
+  border-color: rgba(168, 85, 247, 0.2);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2),
+    0 0 35px rgba(168, 85, 247, 0.04);
+}
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.education-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.education-period {
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.08em;
+}
+
+.education-status {
+  padding: 5px 8px;
+
+  border: 1px solid rgba(168, 85, 247, 0.2);
+
+  border-radius: 5px;
+
+  background: rgba(168, 85, 247, 0.06);
+
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.48rem;
+
+  letter-spacing: 0.1em;
+}
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.education-card h3 {
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 1.25rem;
+
+  font-weight: 650;
+
+  letter-spacing: -0.025em;
+}
+
+.education-card h4 {
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 0.8rem;
+
+  font-weight: 500;
+}
+
+.education-board {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.55rem;
+}
+
+.education-card p {
+  max-width: 700px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 0.72rem;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.education-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 30px;
+
+  padding: 23px 26px;
+
+  border: 1px solid rgba(168, 85, 247, 0.12);
+
+  border-radius: 15px;
+
+  background: rgba(168, 85, 247, 0.025);
+}
+
+.education-footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 43px;
+  height: 43px;
+
+  border: 1px solid rgba(168, 85, 247, 0.18);
+
+  border-radius: 10px;
+
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.65rem;
+}
+
+.education-footer span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.52rem;
+
+  letter-spacing: 0.12em;
+}
+
+.education-footer p {
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 0.7rem;
+}
+
+.education-footer-arrow {
+  margin-left: auto;
+
+  color: #c084fc;
+
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .education-section {
+    padding: 100px 0;
+  }
+
+  .education-container {
+    width: calc(100% - 28px);
+  }
+
+  .education-heading {
+    margin-bottom: 45px;
+  }
+
+  .education-heading h2 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .education-item {
+    grid-template-columns: 25px 1fr;
+
+    gap: 12px;
+  }
+
+  .education-card {
+    padding: 23px 20px;
+  }
+
+  .education-card h3 {
+    font-size: 1.05rem;
+
+    line-height: 1.4;
+  }
+
+  .education-card p {
+    font-size: 0.68rem;
+  }
+
+  .education-footer {
+    align-items: flex-start;
+
+    padding: 20px;
+  }
+}
+
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+.contact-section {
+  position: relative;
+
+  padding: 150px 0 100px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(180deg,
+      #080512 0%,
+      #0d0718 55%,
+      #080512 100%);
+}
+
+/* =========================================================
+   GLOW
+   ========================================================= */
+
+.contact-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+}
+
+.contact-glow-one {
+  width: 500px;
+  height: 500px;
+
+  top: 5%;
+  left: -18%;
+
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.contact-glow-two {
+  width: 400px;
+  height: 400px;
+
+  right: -15%;
+  bottom: 0;
+
+  background: rgba(168, 85, 247, 0.07);
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.contact-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1100px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.contact-heading {
+  max-width: 750px;
+
+  margin-bottom: 70px;
+}
+
+.contact-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.8rem, 6vw, 5rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.065em;
+}
+
+.contact-heading p {
+  max-width: 600px;
+
+  margin-top: 24px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 0.9rem;
+
+  line-height: 1.85;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr 0.9fr;
+
+  gap: 18px;
+}
+
+/* =========================================================
+   MESSAGE CARD
+   ========================================================= */
+
+.contact-message-card {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 38px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(168, 85, 247, 0.16);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(145deg,
+      rgba(168, 85, 247, 0.07),
+      rgba(255, 255, 255, 0.018));
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.contact-message-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -150px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(168, 85, 247, 0.09);
+
+  filter: blur(60px);
+
+  pointer-events: none;
+}
+
+.contact-card-label {
+  position: relative;
+
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.13em;
+}
+
+.contact-message-card h3 {
+  position: relative;
+
+  max-width: 500px;
+
+  margin-bottom: 15px;
+
+  color: #ffffff;
+
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+
+  font-weight: 700;
+
+  letter-spacing: -0.045em;
+}
+
+.contact-message-card p {
+  position: relative;
+
+  max-width: 500px;
+
+  margin-bottom: 30px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 0.75rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.contact-primary-button {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 13px 15px 13px 18px;
+
+  border: 1px solid rgba(168, 85, 247, 0.3);
+
+  border-radius: 9px;
+
+  background: #a855f7;
+
+  color: #ffffff;
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 30px rgba(168, 85, 247, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-primary-button:hover {
+  transform: translateY(-3px);
+
+  background: #9333ea;
+
+  box-shadow:
+    0 15px 40px rgba(168, 85, 247, 0.25);
+}
+
+.contact-button-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 6px;
+
+  background: rgba(0, 0, 0, 0.14);
+
+  font-size: 0.8rem;
+}
+
+/* =========================================================
+   SOCIALS
+   ========================================================= */
+
+.contact-socials {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.social-link {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.065);
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.018);
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.6rem;
+
+  text-decoration: none;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(168, 85, 247, 0.25);
+
+  color: #c084fc;
+}
+
+/* =========================================================
+   CONTACT DETAILS
+   ========================================================= */
+
+.contact-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.contact-detail-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  min-height: 100px;
+
+  padding: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.065);
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.018);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.contact-detail-card:hover {
+  transform: translateX(5px);
+
+  border-color: rgba(168, 85, 247, 0.25);
+
+  background: rgba(168, 85, 247, 0.04);
+}
+
+.contact-detail-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid rgba(168, 85, 247, 0.18);
+
+  border-radius: 11px;
+
+  background: rgba(168, 85, 247, 0.06);
+
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.85rem;
+}
+
+.contact-detail-content {
+  min-width: 0;
+}
+
+.contact-detail-content span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.52rem;
+
+  letter-spacing: 0.11em;
+}
+
+.contact-detail-content h4 {
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 0.75rem;
+
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.contact-detail-arrow {
+  margin-left: auto;
+
+  color: rgba(255, 255, 255, 0.2);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-detail-card:hover .contact-detail-arrow {
+  color: #c084fc;
+
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   AVAILABILITY
+   ========================================================= */
+
+.contact-availability {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 45px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.57rem;
+}
+
+.availability-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  box-shadow:
+    0 0 12px rgba(168, 85, 247, 0.8);
+}
+
+.availability-line {
+  width: 35px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.availability-text {
+  color: rgba(255, 255, 255, 0.27);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .contact-section {
+    padding: 110px 0 80px;
+  }
+
+  .contact-container {
+    width: calc(100% - 28px);
+  }
+
+  .contact-heading {
+    margin-bottom: 45px;
+  }
+
+  .contact-heading h2 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-message-card {
+    min-height: auto;
+
+    padding: 28px 22px;
+  }
+
+  .contact-card-label {
+    margin-bottom: 40px;
+  }
+
+  .contact-availability {
+    flex-wrap: wrap;
+
+    line-height: 1.7;
+  }
+
+  .availability-line {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-socials {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-detail-content h4 {
+    font-size: 0.68rem;
+  }
+}
+
+/* =========================================================
+   PROJECTS SECTION
+   ========================================================= */
+
+.projects-section {
+  position: relative;
+
+  padding: 160px 0 140px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(180deg,
+      #080512 0%,
+      #0d0718 50%,
+      #080512 100%);
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.projects-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+.projects-glow-one {
+  width: 550px;
+  height: 550px;
+
+  top: 5%;
+  left: -20%;
+
+  background: rgba(124, 58, 237, 0.07);
+}
+
+.projects-glow-two {
+  width: 450px;
+  height: 450px;
+
+  right: -18%;
+  bottom: 10%;
+
+  background: rgba(168, 85, 247, 0.07);
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.projects-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.projects-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 55px;
+}
+
+.projects-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.065em;
+}
+
+.projects-heading>p {
+  max-width: 390px;
+
+  margin-bottom: 4px;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 0.75rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.project-filters {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  padding-bottom: 22px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.065);
+}
+
+.project-filter {
+  padding: 9px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.018);
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.57rem;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-filter:hover {
+  color: rgba(255, 255, 255, 0.75);
+
+  border-color: rgba(168, 85, 247, 0.2);
+
+  transform: translateY(-2px);
+}
+
+.project-filter-active {
+  border-color: rgba(168, 85, 247, 0.3);
+
+  background: rgba(168, 85, 247, 0.1);
+
+  color: #c084fc;
+
+  box-shadow:
+    0 0 20px rgba(168, 85, 247, 0.06);
+}
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.projects-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 25px 0 18px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.52rem;
+
+  letter-spacing: 0.1em;
+}
+
+.projects-meta-line {
+  width: 35px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  max-width: 1080px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+.project-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.065);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012));
+
+  box-shadow:
+    0 20px 65px rgba(0, 0, 0, 0.22);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(168, 85, 247, 0.25);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.3),
+    0 0 35px rgba(168, 85, 247, 0.05);
+}
+
+.project-card-featured {
+  border-color:
+    rgba(168, 85, 247, 0.12);
+}
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.project-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 22px 0;
+}
+
+.project-number {
+  color: rgba(168, 85, 247, 0.55);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.57rem;
+
+  letter-spacing: 0.08em;
+}
+
+.project-badges {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.project-category,
+.project-status {
+  padding: 5px 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.065);
+
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.46rem;
+
+  letter-spacing: 0.05em;
+}
+
+.project-status {
+  border-color:
+    rgba(168, 85, 247, 0.2);
+
+  background:
+    rgba(168, 85, 247, 0.06);
+
+  color: #c084fc;
+}
+
+/* =========================================================
+   PROJECT VISUAL
+   ========================================================= */
+
+.project-visual {
+  height: 165px;
+
+  position: relative;
+
+  margin: 14px 14px 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(168, 85, 247, 0.09);
+
+  border-radius: 10px;
+
+  background:
+    radial-gradient(circle at 50% 50%,
+      rgba(168, 85, 247, 0.13),
+      transparent 55%),
+    #090613;
+}
+
+.project-visual-grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.25;
+
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.12) 1px,
+      transparent 1px),
+    linear-gradient(90deg,
+      rgba(168, 85, 247, 0.12) 1px,
+      transparent 1px);
+
+  background-size: 35px 35px;
+
+  mask-image:
+    linear-gradient(to bottom,
+      black,
+      transparent);
+}
+
+.project-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border:
+    1px solid rgba(168, 85, 247, 0.13);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 70px rgba(168, 85, 247, 0.08);
+
+  transition:
+    transform 0.6s ease,
+    width 0.6s ease,
+    height 0.6s ease;
+}
+
+.project-card:hover .project-visual::before {
+  width: 230px;
+  height: 230px;
+}
+
+.project-visual-content {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 9px;
+
+  transform: translate(-50%, -50%);
+}
+
+.project-code-symbol {
+  color: rgba(192, 132, 252, 0.8);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 1.25rem;
+
+  text-shadow:
+    0 0 25px rgba(168, 85, 247, 0.45);
+}
+
+.project-visual-label {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.5rem;
+
+  letter-spacing: 0.15em;
+}
+
+.project-visual-number {
+  position: absolute;
+
+  right: 15px;
+  bottom: 12px;
+
+  color: rgba(255, 255, 255, 0.09);
+
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  letter-spacing: -0.08em;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.project-content {
+  padding: 24px 23px 23px;
+}
+
+.project-content h3 {
+  margin-bottom: 12px;
+
+  color: #ffffff;
+
+  font-size: 1.45rem;
+
+  font-weight: 700;
+
+  letter-spacing: -0.04em;
+
+  line-height: 1.2;
+}
+
+.project-content p {
+  min-height: 72px;
+
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 0.76rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TECHNOLOGIES
+   ========================================================= */
+
+.project-technologies {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-bottom: 22px;
+}
+
+.project-tech {
+  padding: 5px 7px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.47rem;
+
+  letter-spacing: 0.01em;
+}
+
+/* =========================================================
+   CARD FOOTER
+   ========================================================= */
+
+.project-card-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 17px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.055);
+}
+
+.project-type {
+  color: rgba(255, 255, 255, 0.2);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.48rem;
+
+  letter-spacing: 0.08em;
+}
+
+.project-github {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.58rem;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-github:hover {
+  color: #c084fc;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.projects-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 35px;
+
+  padding: 27px 30px;
+
+  border:
+    1px solid rgba(168, 85, 247, 0.12);
+
+  border-radius: 16px;
+
+  background:
+    rgba(168, 85, 247, 0.025);
+}
+
+.projects-footer-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: rgba(255, 255, 255, 0.27);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.5rem;
+
+  letter-spacing: 0.12em;
+}
+
+.projects-footer p {
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 0.7rem;
+}
+
+.projects-github-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 11px 13px 11px 16px;
+
+  border: 1px solid rgba(168, 85, 247, 0.2);
+
+  border-radius: 8px;
+
+  background: rgba(168, 85, 247, 0.06);
+
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.57rem;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.projects-github-button:hover {
+  transform: translateY(-3px);
+
+  background: rgba(168, 85, 247, 0.12);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .projects-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .projects-heading>p {
+    max-width: 600px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .projects-section {
+    padding: 100px 0;
+  }
+
+  .projects-container {
+    width: calc(100% - 28px);
+  }
+
+  .projects-heading h2 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .project-filters {
+    overflow-x: auto;
+
+    flex-wrap: nowrap;
+
+    padding-bottom: 15px;
+
+    scrollbar-width: none;
+  }
+
+  .project-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-filter {
+    flex-shrink: 0;
+  }
+
+  .project-visual {
+    height: 180px;
+  }
+
+  .project-content {
+    padding: 21px 20px;
+  }
+
+  .projects-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 22px;
+  }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 0 0 28px;
+
+  background:
+    linear-gradient(180deg,
+      #080512 0%,
+      #05030a 100%);
+}
+
+/* =========================================================
+   GLOW
+   ========================================================= */
+
+.footer-glow {
+  position: absolute;
+
+  width: 600px;
+  height: 300px;
+
+  top: -180px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    rgba(168, 85, 247, 0.08);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.footer-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1120px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.footer-cta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 75px 0;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.07);
+}
+
+.footer-eyebrow {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.55rem;
+
+  letter-spacing: 0.13em;
+}
+
+.footer-cta h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+.footer-cta-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  flex-shrink: 0;
+
+  padding: 13px 14px 13px 18px;
+
+  border:
+    1px solid rgba(168, 85, 247, 0.3);
+
+  border-radius: 9px;
+
+  background: rgba(168, 85, 247, 0.08);
+
+  color: #c084fc;
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.6rem;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.footer-cta-button span:last-child {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  border-radius: 6px;
+
+  background: rgba(168, 85, 247, 0.12);
+}
+
+.footer-cta-button:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(168, 85, 247, 0.5);
+
+  background:
+    rgba(168, 85, 247, 0.14);
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr auto;
+
+  gap: 50px;
+
+  padding: 65px 0;
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.footer-logo {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #ffffff;
+
+  font-size: 1.15rem;
+
+  font-weight: 800;
+
+  letter-spacing: -0.04em;
+
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: #a855f7;
+}
+
+.footer-brand p {
+  max-width: 280px;
+
+  margin-bottom: 20px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 0.68rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   AVAILABILITY
+   ========================================================= */
+
+.footer-availability {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.5rem;
+}
+
+.footer-status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  box-shadow:
+    0 0 10px rgba(168, 85, 247, 0.8);
+}
+
+/* =========================================================
+   COLUMNS
+   ========================================================= */
+
+.footer-column-title {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.22);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.5rem;
+
+  letter-spacing: 0.12em;
+}
+
+.footer-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-links a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  width: fit-content;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 0.68rem;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #c084fc;
+
+  transform: translateX(4px);
+}
+
+.footer-links a span {
+  color: rgba(168, 85, 247, 0.7);
+
+  font-size: 0.65rem;
+}
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+.footer-top-wrapper {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  justify-content: center;
+}
+
+.footer-top-wrapper>span {
+  color: rgba(255, 255, 255, 0.2);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.45rem;
+
+  writing-mode: vertical-rl;
+
+  letter-spacing: 0.1em;
+}
+
+.footer-top-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  border:
+    1px solid rgba(168, 85, 247, 0.18);
+
+  border-radius: 10px;
+
+  background:
+    rgba(168, 85, 247, 0.04);
+
+  color: #c084fc;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.footer-top-button:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(168, 85, 247, 0.4);
+
+  background:
+    rgba(168, 85, 247, 0.1);
+}
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding-top: 22px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.055);
+
+  color: rgba(255, 255, 255, 0.2);
+
+  font-family: "Fira Code", monospace;
+
+  font-size: 0.48rem;
+
+  letter-spacing: 0.02em;
+}
+
+.footer-bottom-line {
+  width: 35px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+}
+
+.footer-code {
+  margin-left: auto;
+
+  color: rgba(168, 85, 247, 0.45);
+
+  font-size: 0.6rem;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .footer-main {
+    grid-template-columns:
+      1.5fr 1fr 1fr;
+
+    gap: 35px;
+  }
+
+  .footer-top-wrapper {
+    display: none;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .footer-container {
+    width: calc(100% - 28px);
+  }
+
+  .footer-cta {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 60px 0;
+  }
+
+  .footer-cta h2 {
+    font-size: clamp(2.4rem, 12vw, 3.5rem);
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px 25px;
+
+    padding: 50px 0;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+
+    line-height: 1.7;
+  }
+
+  .footer-bottom-line {
+    display: none;
+  }
+
+  .footer-code {
+    margin-left: 0;
+  }
+}
+
+/* =========================================================
+   GLOBAL ANIMATIONS
+   ========================================================= */
+
+/* ---------- Fade Up ---------- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Fade In ---------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- Scale In ---------- */
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------- Glow Pulse ---------- */
+
+@keyframes purplePulse {
+
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* ---------- Floating ---------- */
+
+@keyframes floating {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================================================
+   REVEAL CLASSES
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+
+  transform: translateY(24px);
+
+  animation:
+    fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  animation-delay: 0.4s;
+}
+
+.reveal-delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* =========================================================
+   HERO ANIMATIONS
+   ========================================================= */
+
+.hero-animate {
+  opacity: 0;
+
+  animation:
+    fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-animate-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.hero-animate-delay-2 {
+  animation-delay: 0.25s;
+}
+
+.hero-animate-delay-3 {
+  animation-delay: 0.4s;
+}
+
+.hero-animate-delay-4 {
+  animation-delay: 0.55s;
+}
+
+.hero-animate-delay-5 {
+  animation-delay: 0.7s;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-animate {
+  opacity: 0;
+
+  animation:
+    fadeUp 0.8s ease forwards;
+}
+
+/* =========================================================
+   PROJECT CARDS
+   ========================================================= */
+
+.project-card {
+  animation:
+    fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.project-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.project-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.project-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.project-card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.project-card:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.project-card:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+.project-card:nth-child(9) {
+  animation-delay: 0.45s;
+}
+
+/* =========================================================
+   PROJECT VISUAL
+   ========================================================= */
+
+.project-visual-grid {
+  transition:
+    opacity 0.5s ease,
+    transform 0.7s ease;
+}
+
+.project-card:hover .project-visual-grid {
+  opacity: 0.4;
+
+  transform: scale(1.04);
+}
+
+.project-code-symbol {
+  transition:
+    transform 0.5s ease,
+    text-shadow 0.5s ease;
+}
+
+.project-card:hover .project-code-symbol {
+  transform: scale(1.12);
+
+  text-shadow:
+    0 0 35px rgba(168, 85, 247, 0.75);
+}
+
+/* =========================================================
+   BUTTON ANIMATIONS
+   ========================================================= */
+
+.project-github,
+.projects-github-button,
+.footer-cta-button,
+.footer-top-button {
+  will-change: transform;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.nav-link {
+  position: relative;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: #a855f7;
+
+  box-shadow:
+    0 0 8px rgba(168, 85, 247, 0.6);
+
+  transition:
+    width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #c084fc;
+
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   PURPLE GLOW
+   ========================================================= */
+
+.purple-glow-animation {
+  animation:
+    purplePulse 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   FLOATING ELEMENT
+   ========================================================= */
+
+.floating-animation {
+  animation:
+    floating 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   FINAL RESPONSIVE POLISH
+   ========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  /* General section spacing */
+
+  section {
+    scroll-margin-top: 90px;
+  }
+
+  /* Prevent oversized headings */
+
+  h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+  }
+
+  h2 {
+    font-size: clamp(2.3rem, 5vw, 4rem);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* General */
+
+  section {
+    scroll-margin-top: 75px;
+  }
+
+  /* Container safety */
+
+  .container,
+  .section-container {
+    width: calc(100% - 32px);
+    max-width: 100%;
+  }
+
+  /* Headings */
+
+  h1 {
+    font-size: clamp(2.7rem, 13vw, 4.5rem);
+    line-height: 0.95;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    line-height: 1;
+  }
+
+  /* Paragraphs */
+
+  p {
+    max-width: 100%;
+  }
+
+  /* Buttons */
+
+  button,
+  a {
+    touch-action: manipulation;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: clamp(2.5rem, 14vw, 3.8rem);
+  }
+
+  h2 {
+    font-size: clamp(1.9rem, 10vw, 2.8rem);
+  }
+
+  .container,
+  .section-container {
+    width: calc(100% - 28px);
+  }
+}
