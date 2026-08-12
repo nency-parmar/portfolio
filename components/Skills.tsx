@@ -92,7 +92,7 @@ export default function Skills() {
                     </span>
 
                     <h2>
-                        Tools I use to{" "}
+                        Software I use to{" "}
                         <span className="gradient-text">
                             build.
                         </span>
