@@ -171,6 +171,23 @@ const projects: Project[] = [
         status: "Ongoing",
         featured: true,
     },
+
+    {
+        number: "10",
+        title: "Task - Flow",
+        category: "Full Stack",
+        description:
+            "TaskFlow is a simple and modern Task Management System built using the MERN Stack.",
+        technologies: [
+            "MongoDB",
+            "Express.js",
+            "React.js",
+            "Node.js",
+        ],
+        github:
+            "https://github.com/nency-parmar/TaskFlow.git",
+        featured: true,
+    },
 ];
 
 export default function Projects() {
